@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | StudySpark</title>
+    <meta name="description" content="Get in touch with the StudySpark team." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="nav container">
+        <a href="index.html" class="brand"><img src="assets/StudySparkSite.png" alt="Website Logo" width="200"></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="choose-path.html">Subjects</a>
+          <a href="tutor.html">AI Tutor</a>
+          <a href="study-resources.html">Resources</a>
+          <a href="posters.html">Posters</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active-link">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main container">
+      <section class="page-card contact-page">
+        <div class="contact-header">
+          <p class="eyebrow">Contact Us</p>
+          <h1>Get in touch</h1>
+          <p class="contact-copy">
+            Have a question or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="question">Question or Message</label>
+            <textarea id="question" name="question" rows="6" required placeholder="Tell us what you'd like to know..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </section>
+    </main>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

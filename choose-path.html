@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Your Path | StudySpark</title>
+    <meta name="description" content="Select a subject to start learning with StudySpark's AI tutor." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="nav container">
+        <a href="index.html" class="brand"><img src="assets/StudySparkSite.png" alt="Website Logo" width="200"></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="choose-path.html" class="active-link">Choose Path</a>
+          <a href="study-resources.html">Resources</a>
+          <a href="posters.html">Posters</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main container">
+      <section class="page-card">
+        <p class="eyebrow">Choose your path</p>
+        <h1>Pick the subject you need help with</h1>
+        <p class="page-copy">
+          Once you choose a subject, the AI tutor will appear so you can ask questions and learn step by step.
+        </p>
+        <div class="subject-grid">
+          <a class="subject-pill" href="tutor.html?subject=Programming">Programming</a>
+          <a class="subject-pill" href="tutor.html?subject=Business">Business</a>
+          <a class="subject-pill" href="tutor.html?subject=Mathematics">Mathematics</a>
+          <a class="subject-pill" href="tutor.html?subject=Science">Science</a>
+          <a class="subject-pill" href="tutor.html?subject=English">English</a>
+          <a class="subject-pill" href="tutor.html?subject=Cybersecurity">Cybersecurity</a>
+        </div>
+      </section>
+
+      <section id="tutor" class="section container tutor-section hidden" aria-hidden="true">
+        <div class="tutor-box">
+          <div class="tutor-copy">
+            <p class="eyebrow">AI tutor</p>
+            <h2 id="tutor-heading">Your subject tutor will appear here</h2>
+            <p id="tutor-description">
+              Select a subject above to start learning with a focused tutor.
+            </p>
+            <div class="suggestions">
+              <button class="chip" data-question="Explain this topic in simple steps">Simple explanation</button>
+              <button class="chip" data-question="Give me one practice example">Practice example</button>
+              <button class="chip" data-question="Help me understand this step by step">Step-by-step help</button>
+            </div>
+          </div>
+
+          <div class="chat-panel">
+            <div class="subject-banner">
+              <span class="subject-label">Selected subject</span>
+              <strong id="selected-subject">Not chosen yet</strong>
+            </div>
+            <div id="chat-log" class="chat-log">
+              <div class="message bot">
+                Choose a subject first, then ask me anything.
+              </div>
+            </div>
+            <form id="tutor-form" class="chat-form">
+              <textarea id="question" rows="3" placeholder="Ask your question here..."></textarea>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

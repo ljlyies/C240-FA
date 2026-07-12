@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tutor | StudySpark</title>
+    <meta name="description" content="Chat with StudySpark's AI tutor for subject help." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="nav container">
+        <a href="index.html" class="brand"><img src="assets/StudySparkSite.png" alt="Website Logo" width="200"></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="choose-path.html">Choose Path</a>
+          <a href="tutor.html" class="active-link">AI Tutor</a>
+          <a href="study-resources.html">Resources</a>
+          <a href="posters.html">Posters</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main container">
+      <section class="page-card tutor-page">
+        <div class="tutor-copy">
+          <p class="eyebrow">AI tutor</p>
+          <h1 id="tutor-heading">Your personal AI learning assistant</h1>
+          <p id="tutor-description">
+            Ask about programming, business, mathematics, science, English, or cybersecurity. The tutor can explain simply, explain in detail, give examples, ask follow-up questions, and recommend learning resources.
+          </p>
+        </div>
+
+        <div class="chat-panel tutor-chat-panel">
+          <div class="subject-banner">
+            <span class="subject-label">Selected subject</span>
+            <strong id="selected-subject">Not chosen yet</strong>
+          </div>
+          <div id="chat-log" class="chat-log">
+            <div class="message bot">
+              Hi! I’m your StudySpark tutor. Ask me anything and I’ll guide you step by step.
+            </div>
+          </div>
+          <form id="tutor-form" class="chat-form">
+            <textarea id="question" rows="3" placeholder="Ask your question here..."></textarea>
+            <div class="action-buttons" aria-label="Tutor follow-up actions">
+              <button type="button" class="action-btn" data-action="simple">Explain simply</button>
+              <button type="button" class="action-btn" data-action="detailed">Explain in detail</button>
+              <button type="button" class="action-btn" data-action="example">Give examples</button>
+              <button type="button" class="action-btn" data-action="followup">Ask follow-up</button>
+              <button type="button" class="action-btn" data-action="resources">Recommend resources</button>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="resources-db.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.5/purify.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Resources | StudySpark</title>
+    <meta name="description" content="Upload and access study materials for the AI tutor." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="nav container">
+        <a href="index.html" class="brand"><img src="assets/StudySparkSite.png" alt="Website Logo" width="200"></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="choose-path.html">Choose Path</a>
+          <a href="tutor.html">AI Tutor</a>
+          <a href="study-resources.html" class="active-link">Resources</a>
+          <a href="posters.html">Posters</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main container">
+      <section class="page-card resources-page">
+        <div class="resources-header">
+          <p class="eyebrow">Study Resources</p>
+          <h1>Your AI knowledge base</h1>
+          <p class="resources-copy">
+            Upload PDF notes, study guides, cheat sheets, and practice questions. The AI tutor will search these documents to give you accurate answers based on your learning materials.
+          </p>
+        </div>
+
+        <div class="upload-section">
+          <h2>Upload Documents</h2>
+          <div class="upload-area" id="upload-area">
+            <div class="upload-icon">📄</div>
+            <p>Drag and drop files here or click to browse</p>
+            <p class="upload-hint">Any file type (Max 20MB each)</p>
+            <input type="file" id="file-input" multiple hidden />
+          </div>
+          <div class="upload-meta" style="display:flex;gap:0.6rem;align-items:center;margin-bottom:0.8rem;">
+            <label for="category-select" style="color:var(--muted);">Upload category:</label>
+            <select id="category-select">
+              <option value="pdf">PDF Notes</option>
+              <option value="guide">Study Guides</option>
+              <option value="cheat">Cheat Sheets</option>
+              <option value="practice">Practice Questions</option>
+              <option value="poster">Posters</option>
+            </select>
+          </div>
+          <div class="upload-buttons">
+            <button class="btn btn-secondary" id="browse-btn">Browse Files</button>
+            <button class="btn btn-primary" id="upload-btn" disabled>Upload Documents</button>
+          </div>
+          <p id="upload-status" class="upload-hint" style="margin-top: 0.6rem;"></p>
+        </div>
+
+        <div class="resources-section">
+          <h2>Your Documents</h2>
+          <div class="resource-categories">
+            <div class="category">
+              <h3>📋 PDF Notes</h3>
+              <div id="pdf-list" class="resource-list">
+                <p class="empty-state">No PDF notes uploaded yet</p>
+              </div>
+            </div>
+            <div class="category">
+              <h3>📚 Study Guides</h3>
+              <div id="guide-list" class="resource-list">
+                <p class="empty-state">No study guides uploaded yet</p>
+              </div>
+            </div>
+            <div class="category">
+              <h3>⚡ Cheat Sheets</h3>
+              <div id="cheat-list" class="resource-list">
+                <p class="empty-state">No cheat sheets uploaded yet</p>
+              </div>
+            </div>
+            <div class="category">
+              <h3>❓ Practice Questions</h3>
+              <div id="practice-list" class="resource-list">
+                <p class="empty-state">No practice questions uploaded yet</p>
+              </div>
+            </div>
+            <div class="category" id="posters">
+              <h3>🖼 Posters</h3>
+              <div id="poster-list" class="resource-list">
+                <p class="empty-state">No posters uploaded yet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rag-info">
+          <h3>How the RAG system works</h3>
+          <p>When you ask the AI tutor a question, it searches through your uploaded documents to find relevant information before answering. This ensures the tutor's responses are grounded in your actual learning materials, not just general knowledge.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="resources-db.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.11.0/mammoth.browser.min.js"></script>
+    <script src="resources.js"></script>
+  </body>
+</html>

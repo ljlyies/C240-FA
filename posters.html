@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posters | StudySpark</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="nav container">
+        <a href="index.html" class="brand">StudySpark</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="choose-path.html">Subjects</a>
+          <a href="tutor.html">AI Tutor</a>
+          <a href="study-resources.html">Resources</a>
+          <a href="posters.html" class="active-link">Posters</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main container">
+      <section class="page-card">
+        <h1>Site Posters</h1>
+        <p class="resources-copy">This is our highlighted design, showcasing the theme of StudySpark.</p>
+        <div id="poster-gallery" class="resource-categories" style="margin-top:1rem;"></div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const cont = document.getElementById('poster-gallery');
+        if (!cont) return;
+
+        cont.innerHTML = `
+          <div class="card poster-card-static" style="padding:0;">
+            <img src="assets/Study-Spark-Poster.jpeg" alt="Study Spark Poster" class="poster-image-static" />
+            <div style="padding:0.8rem;"><strong>Study Spark Poster</strong></div>
+          </div>
+        `;
+      });
+    </script>
+  </body>
+</html>

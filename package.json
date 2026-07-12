@@ -1,0 +1,13 @@
+{
+  "name": "study-spark-site(updated)",
+  "version": "1.0.0",
+  "description": "This is your \"FA Project\" site with the Python/Flask backend removed and the AI tutor chat pointed at n8n instead. Plain HTML/CSS/JS, no build step.",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
