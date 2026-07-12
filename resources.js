@@ -32,7 +32,7 @@ const MAX_CONTENT_CHARS = 6000;
 // Set up the PDF.js worker (needed once, before any PDF is read).
 if (typeof pdfjsLib !== 'undefined') {
   pdfjsLib.GlobalWorkerOptions.workerSrc =
-    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.worker.min.js';
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
