@@ -49,7 +49,7 @@ if (!form || !questionInput || !chatLog) {
     }
 
     try {
-      // Documents now live in IndexedDB (resources.js stores the raw file
+      // Documents live in IndexedDB (resources.js stores the raw file
       // plus extracted text there). Only text-bearing documents are useful
       // to the AI, and we cap how much/how many we send per request.
       let documents = [];

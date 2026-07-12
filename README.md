@@ -18,7 +18,17 @@ backend in between).
   tutor.html.
 - `contact.js` — the contact form (local only, doesn't call n8n).
 - `config.js` — the one file you edit with your real n8n webhook URL.
-- `assets/` — logo and poster images.
+- `assets/` — logo and poster images (now includes a second poster,
+  `Study-Spark-Poster2.jpeg`, shown alongside the original on `about.html`
+  and `posters.html`).
+
+**pdf.js version note:** `study-resources.html` loads pdf.js pinned to
+**3.11.174**, not the latest version. From pdf.js v4 onward, the CDN build
+switched to ES modules (`.mjs`, needs `type="module"`), which breaks a
+plain `<script src="...">` tag with a silent-looking 404/MIME error. 3.11.174
+is the newest version that still ships the classic `pdf.min.js` build this
+site's `<script>` tags expect — don't bump this version without also
+switching the script tags to `type="module"`.
 
 ## Deploy to GitHub Pages
 

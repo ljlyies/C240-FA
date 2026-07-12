@@ -62,16 +62,11 @@
           </section>
 
           <section class="about-section">
-            <h2>Featured Poster</h2>
-            <div class="featured-poster-card">
-              <img src="assets/Study-Spark-Poster.jpeg" alt="Study Spark poster" class="featured-poster-image" />
-              <div class="featured-poster-copy">
-                <p>
-                  This poster highlights the StudySpark mission and is featured here as a preview.
-                </p>
-                <a href="posters.html" class="btn btn-secondary">View poster page</a>
-              </div>
-            </div>
+            <h2>Featured Posters</h2>
+            <p class="section-copy">
+              A growing set of StudySpark poster designs that can be expanded easily over time.
+            </p>
+            <div id="featured-posters" class="poster-grid" style="margin-top: 1rem;"></div>
           </section>
 
           <section class="about-section">
@@ -123,5 +118,35 @@
 
     <script src="config.js"></script>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const featuredPosters = document.getElementById('featured-posters');
+        if (!featuredPosters) return;
+
+        const posters = [
+          {
+            src: 'assets/Study-Spark-Poster.jpeg',
+            alt: 'Original StudySpark poster',
+            title: 'Study Spark Poster'
+          },
+          {
+            src: 'assets/Study-Spark-Poster2.jpeg',
+            alt: 'Updated StudySpark poster',
+            title: 'Study Spark Poster 2'
+          }
+        ];
+
+        featuredPosters.innerHTML = posters
+          .map(
+            (poster) => `
+              <div class="card poster-card-static">
+                <img src="${poster.src}" alt="${poster.alt}" class="poster-image-static" />
+                <div class="poster-card-caption"><strong>${poster.title}</strong></div>
+              </div>
+            `
+          )
+          .join('');
+      });
+    </script>
   </body>
 </html>

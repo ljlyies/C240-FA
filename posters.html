@@ -27,21 +27,42 @@
       <section class="page-card">
         <h1>Site Posters</h1>
         <p class="resources-copy">This is our highlighted design, showcasing the theme of StudySpark.</p>
-        <div id="poster-gallery" class="resource-categories" style="margin-top:1rem;"></div>
+        <div id="poster-gallery" class="poster-grid" style="margin-top:1rem;"></div>
       </section>
     </main>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const cont = document.getElementById('poster-gallery');
-        if (!cont) return;
+      const posters = [
+        {
+          src: 'assets/Study-Spark-Poster.jpeg',
+          alt: 'Original StudySpark poster',
+          title: 'Study Spark Poster'
+        },
+        {
+          src: 'assets/Study-Spark-Poster2.jpeg',
+          alt: 'Updated StudySpark poster',
+          title: 'Study Spark Poster 2'
+        }
+      ];
 
-        cont.innerHTML = `
-          <div class="card poster-card-static" style="padding:0;">
-            <img src="assets/Study-Spark-Poster.jpeg" alt="Study Spark Poster" class="poster-image-static" />
-            <div style="padding:0.8rem;"><strong>Study Spark Poster</strong></div>
-          </div>
-        `;
+      function renderPosters(container, items) {
+        if (!container) return;
+
+        container.innerHTML = items
+          .map(
+            (poster) => `
+              <div class="card poster-card-static">
+                <img src="${poster.src}" alt="${poster.alt}" class="poster-image-static" />
+                <div class="poster-card-caption"><strong>${poster.title}</strong></div>
+              </div>
+            `
+          )
+          .join('');
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        renderPosters(document.getElementById('poster-gallery'), posters);
+        renderPosters(document.getElementById('featured-posters'), posters);
       });
     </script>
   </body>

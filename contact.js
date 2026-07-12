@@ -25,7 +25,7 @@ contactForm.addEventListener('submit', (e) => {
   localStorage.setItem('contactMessages', JSON.stringify(messages));
 
   // Show success message
-  showStatus('Thank you for your message! We'll get back to you soon.', 'success');
+  showStatus("Thank you for your message! We'll get back to you soon.", 'success');
 
   // Reset form
   contactForm.reset();

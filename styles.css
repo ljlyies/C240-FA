@@ -433,8 +433,17 @@ h1 {
   margin: 0 0 1rem;
 }
 
+.poster-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
 .poster-card-static {
   overflow: hidden;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .poster-image-static {
@@ -442,6 +451,13 @@ h1 {
   width: 100%;
   height: auto;
   object-fit: contain;
+  max-height: 220px;
+}
+
+.poster-card-caption {
+  padding: 0.6rem 0.8rem;
+  color: var(--text);
+  font-size: 0.95rem;
 }
 
 @media (max-width: 700px) {
